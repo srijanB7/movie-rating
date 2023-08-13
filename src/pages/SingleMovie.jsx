@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useMovie } from "../contexts/Moviecontext";
 import { Navbar } from "../components/Navbar/Navbar";
@@ -6,10 +6,12 @@ import "../App.css";
 
 export const SingleMovie = () => {
     const { id } = useParams();
-    const { movies, handleStar} = useMovie();
+    const { movies, handleStar, resetSearch} = useMovie();
     const movie = movies.find((movie) => movie.id == id);
     const isStarred = movie?.star;
-
+    useEffect(() => {
+        resetSearch();
+    }, [movie])
     return (
         <div className="single-movie-card">
             <Navbar />
@@ -32,7 +34,7 @@ export const SingleMovie = () => {
                     <p>Cast: {movie.cast.join(", ")}</p>
                     <div className="action-btns">
                         <button onClick={() => {
-                        handleStar(isStarred, id);
+                        handleStar(isStarred, movie.id);
                     }}>{isStarred ? "Unstar" : "Star"}</button>
                         <button>Add to Watchlist</button>
                     </div>

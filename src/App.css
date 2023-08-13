@@ -1,0 +1,87 @@
+.home-content {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-around;
+}
+
+.movies {
+    margin-top: 40px;
+    justify-content: space-around;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.add-btn {
+    border: none;
+    padding: 10px 15px;
+    background-color: #333333;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.single-movie-content {
+    margin-top: 20px;
+    display: flex;
+    padding: 3rem;
+    background-color: #fffffe;
+    gap: 30px;
+}
+.single-movie-content img {
+    height: 500px;
+    width: 500px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.action-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-btns button {
+    border: none;
+    padding: 10px;
+    background-color: #333333;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.starred-content {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.add-movie-content {
+    margin: 30px;
+    padding: 1rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user-input {
+    display: flex;
+    flex-direction: column;
+}
+.add-movie-btn {
+    width: 200px;
+    align-self: center;
+    border: none;
+    padding: 10px;
+    background-color: #333333;
+    color: #ffffff;
+    cursor: pointer;
+}

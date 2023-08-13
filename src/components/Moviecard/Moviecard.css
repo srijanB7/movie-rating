@@ -1,0 +1,47 @@
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 8px;
+    
+    width: 300px;
+    border: 5px solid #F5F4F4;
+    
+}
+
+.movie-card h3 {
+    padding: 0 0.5rem;
+}
+.movie-card p {
+    padding: 0 0.5rem;
+    height: 130px;
+    
+}
+
+.movie-card img {
+    padding: 0;
+    height: 200px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    
+}
+
+.btns button{
+    border: none;
+    padding: 10px;
+    background-color: #333333;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.link-movie {
+    text-decoration: none;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+}

@@ -8,7 +8,7 @@ export const SingleMovie = () => {
     const { id } = useParams();
     const { movies, handleStar} = useMovie();
     const movie = movies.find((movie) => movie.id == id);
-    const isStarred = movies.find((movie) => movie.id === id)?.star;
+    const isStarred = movie?.star;
 
     return (
         <div className="single-movie-card">

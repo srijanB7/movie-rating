@@ -47,6 +47,9 @@ export const MovieProvider = ({ children }) => {
         dispatch({ type: "find movie", payload: searchText});
     } 
 
+    function resetSearch() {
+        dispatch({type: "reset search"});
+    }
     return (
         <MovieContext.Provider
             value={{
@@ -61,7 +64,8 @@ export const MovieProvider = ({ children }) => {
                 releaseYear,
                 genre,
                 addMovie,
-                findMovie
+                findMovie,
+                resetSearch
             }}
         >
             {children}

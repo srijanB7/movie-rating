@@ -42,5 +42,11 @@ export function dataReducer(state, action) {
             const searchResults = state.movies.filter(movie => movie.title.toLowerCase().includes(action.payload));
             return {...state, searchedMovies: searchResults}
         }
+        case "reset search": {
+            return {
+                ...state, 
+                searchedMovies: [],
+            }
+        }
     }
 }

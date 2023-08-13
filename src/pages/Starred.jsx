@@ -11,9 +11,10 @@ export const Starred = () => {
         <div>
             <Navbar />
             <div className="starred-content">
-                {starredMovies.map((movie) => (
+                {   starredMovies.length > 0 ?
+                starredMovies.map((movie) => (
                     <Moviecard key={movie.id} {...movie} />
-                ))}
+                )) : <p>No Starred movies!</p>}
             </div>
         </div>
     );

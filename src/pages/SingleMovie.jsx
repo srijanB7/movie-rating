@@ -6,8 +6,9 @@ import "../App.css";
 
 export const SingleMovie = () => {
     const { id } = useParams();
-    const { movies, } = useMovie();
+    const { movies, handleStar} = useMovie();
     const movie = movies.find((movie) => movie.id == id);
+    const isStarred = movies.find((movie) => movie.id === id)?.star;
 
     return (
         <div className="single-movie-card">
@@ -30,7 +31,9 @@ export const SingleMovie = () => {
                     <p>Writer: {movie.writer}</p>
                     <p>Cast: {movie.cast.join(", ")}</p>
                     <div className="action-btns">
-                        <button>Star</button>
+                        <button onClick={() => {
+                        handleStar(isStarred, id);
+                    }}>{isStarred ? "Unstar" : "Star"}</button>
                         <button>Add to Watchlist</button>
                     </div>
                 </div>

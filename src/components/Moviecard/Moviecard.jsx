@@ -5,9 +5,8 @@ import { useMovie } from "../../contexts/Moviecontext";
 
 export const Moviecard = ({ id, title, imageURL, summary }) => {
     const { movies, handleStar } = useMovie();
-    const isStarred = movies.find(movie => movie.id === id).star;
-    
-    
+    const isStarred = movies.find((movie) => movie.id === id).star;
+
     return (
         <div className="movie-card">
             <Link to={`/movie/${id}`} className="link-movie">
@@ -16,7 +15,13 @@ export const Moviecard = ({ id, title, imageURL, summary }) => {
                 <p>{summary}</p>
             </Link>
             <div className="btns">
-                <button onClick={() => {handleStar(isStarred, id);}}>{isStarred ? "Starred" : "Star"}</button>
+                <button
+                    onClick={() => {
+                        handleStar(isStarred, id);
+                    }}
+                >
+                    {isStarred ? "Unstar" : "Star"}
+                </button>
                 <button>Add to watchlist</button>
             </div>
         </div>

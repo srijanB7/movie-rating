@@ -5,13 +5,13 @@ import { useMovie } from "../../contexts/Moviecontext";
 
 export const Navbar = () => {
     const [searchText, setSearchText] = useState("");
-    const { searchedMovies, findMovie } = useMovie();
+    const { searchedMovies, findMovie, resetSearch } = useMovie();
     const handleChange = (e) => {
         setSearchText(e.target.value);
         findMovie(e.target.value);
     };
     useEffect(() => {
-        setSearchText("");
+        resetSearch();
     }, [])
     
     return (
